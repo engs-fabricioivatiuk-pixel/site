@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avenged Sevenfold</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    body.alto-contraste {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    header {
+      background-color: #111111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    body.alto-contraste header {
+      background-color: #eeeeee !important;
+      border-bottom: 2px solid #000000 !important;
+    }
+
+    .acessibilidade {
+      margin-bottom: 15px;
+    }
+
+    .acessibilidade button {
+      background-color: #222222;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 8px 12px;
+      margin: 2px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    body.alto-contraste .acessibilidade button {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .menu-btn {
+      background-color: #222222;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 8px 16px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    body.alto-contraste .menu-btn {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
+    }
+
+    #aba-inicio:checked ~ header label[for="aba-inicio"],
+    #aba-albuns:checked ~ header label[for="aba-albuns"] {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body.alto-contraste #aba-inicio:checked ~ header label[for="aba-inicio"],
+    body.alto-contraste #aba-albuns:checked ~ header label[for="aba-albuns"] {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .pagina {
+      display: none;
+    }
+
+    #aba-inicio:checked ~ main #conteudo-inicio {
+      display: block;
+    }
+
+    #aba-albuns:checked ~ main #conteudo-albuns {
+      display: block;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+    }
+
+    body.alto-contraste h2 {
+      border-bottom: 1px solid #000000 !important;
+    }
+
+    .foto-banda {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ffffff;
+    }
+
+    body.alto-contraste .foto-banda {
+      border: 1px solid #000000 !important;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .album {
+      background-color: #111111;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #ffffff;
+    }
+
+    body.alto-contraste .album {
+      background-color: #e0e0e0 !important;
+      color: #000000 !important;
+      border-left: 4px solid #000000 !important;
+    }
+
+    body.alto-contraste .album h3 {
+      color: #000000 !important;
+    }
+
+    .album h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="radio" id="aba-inicio" name="navegacao" checked>
+  <input type="radio" id="aba-albuns" name="navegacao">
+
+  <header>
+    <div class="acessibilidade">
+      <button onclick="mudarFonte(2)">A+</button>
+      <button onclick="mudarFonte(-2)">A-</button>
+      <button onclick="alternarContraste()">Alto Contraste</button>
+    </div>
+    
+    <nav>
+      <label for="aba-inicio" class="menu-btn">Início</label>
+      <label for="aba-albuns" class="menu-btn">Álbuns</label>
+    </nav>
+  </header>
+
+  <main>
+    <div id="conteudo-inicio" class="pagina">
+      <h2>Sobre a Banda</h2>
+      <p>Avenged Sevenfold (também conhecida como A7X) é uma banda americana de heavy metal formada em Huntington Beach,

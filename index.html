@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avenged Sevenfold</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    body.alto-contraste {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    header {
+      background-color: #111111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    body.alto-contraste header {
+      background-color: #eeeeee !important;
+      border-bottom: 2px solid #000000 !important;
+    }
+
+    .acessibilidade {
+      margin-bottom: 15px;
+    }
+
+    .acessibilidade button {
+      background-color: #222222;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 8px 12px;
+      margin: 2px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    body.alto-contraste .acessibilidade button {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
+    }
+
+    .logo-img {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .menu-btn {
+      background-color: #222222;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 8px 16px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    body.alto-contraste .menu-btn {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      border: 2px solid #000000 !important;
+    }
+
+    #aba-inicio:checked ~ header label[for="aba-inicio"],
+    #aba-albuns:checked ~ header label[for="aba-albuns"] {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body.alto-contraste #aba-inicio:checked ~ header label[for="aba-inicio"],
+    body.alto-contraste #aba-albuns:checked ~ header label[for="aba-albuns"] {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .pagina {
+      display: none;
+    }
+
+    #aba-inicio:checked ~ main #conteudo-inicio {
+      display: block;
+    }
+
+    #aba-albuns:checked ~ main #conteudo-albuns {
+      display: block;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+    }
+
+    body.alto-contraste h2 {
+      border-bottom: 1px solid #000000 !important;
+    }
+
+    .foto-banda {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ffffff;
+    }
+
+    body.alto-contraste .foto-banda {
+      border: 1px solid #000000 !important;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .album {
+      background-color: #111111;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #ffffff;
+    }
+
+    body.alto-contraste .album {
+      background-color: #e0e0e0 !important;
+      color: #000000 !important;
+      border-left: 4px solid #000000 !important;
+    }
+
+    body.alto-contraste .album h3 {
+      color: #000000 !important;
+    }
+
+    .album h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="radio" id="aba-inicio" name="navegacao" checked>
+  <input type="radio" id="aba-albuns" name="navegacao">
+
+  <header>
+    <div class="acessibilidade">
+      <button onclick="mudarFonte(2)">A+</button>
+      <button onclick="mudarFonte(-2)">A-</button>
+      <button onclick="alternarContraste()">Alto Contraste</button>
+    </div>
+    
+    <img src="avenged.png" alt="Logo Avenged Sevenfold" class="logo-img">
+
+    <nav>
+      <label for="aba-inicio" class="menu-btn">Início</label>
+      <label for="aba-albuns" class="menu-btn">Álbuns</label>
+    </nav>
+  </header>
+
+  <main>
+    <div id="conteudo-inicio" class="pagina">
+      <h2>Sobre a Banda</h2>
+      <p>Avenged Sevenfold (também conhecida como A7X) é uma banda americana de heavy metal formada em Huntington Beach, Califórnia, em 1999.</p>
+
+      <h2>Uma Trajetória Única</h2>
+      <p>O Avenged Sevenfold se destaca por sua constante evolução musical. Começando no metalcore pesado nos anos 2000, a banda se reinventou incorporando influências de hard rock, metal progressivo e arranjos orquestrais complexos. Mesmo após a trágica perda do baterista fundador Jimmy "The Rev" Sullivan, a banda manteve seu legado vivo com o apoio dos fãs e continua sendo um dos maiores nomes do rock mundial moderno.</p>
+
+      <h2>Legado de Jimmy "The Rev" Sullivan</h2>
+      <p>Jimmy "The Rev" Sullivan foi o baterista cofundador, compositor e vocalista de apoio da banda. Conhecido por seu talento genial na bateria, vocais marcantes e criatividade única em faixas como "A Little Piece of Heaven", The Rev faleceu em dezembro de 2009. Seu legado e sua essência continuam sendo a alma do Avenged Sevenfold e são homenageados pela banda em todos os shows e álbuns posteriores.</p>
+
+      <img src="ave.jpg" alt="Integrantes do Avenged Sevenfold" class="foto-banda">
+
+      <h2>Membros Principais</h2>
+      <ul>
+        <li>M. Shadows - Vocal</li>
+        <li>Synyster Gates - Guitarra Solo</li>
+        <li>Zacky Vengeance - Guitarra Base</li>
+        <li>Johnny Christ - Baixo</li>
+        <li>Brooks Wackerman - Bateria</li>
+      </ul>
+    </div>
+
+    <div id="conteudo-albuns" class="pagina">
+      <h2>Discografia Principal</h2>
+      
+      <div class="album">
+        <h3>City of Evil (2005)</h3>
+        <p>Álbum que consagrou a banda mundialmente, com sucessos como Bat Country e Seize the Day.</p>
+      </div>
+
+      <div class="album">
+        <h3>Avenged Sevenfold (2007)</h3>
+        <p>Álbum homônimo auto-produzido, trazendo faixas marcantes como Afterlife e A Little Piece of Heaven.</p>
+      </div>
+
+      <div class="album">
+        <h3>Nightmare (2010)</h3>
+        <p>Álbum gravado em homenagem ao falecido baterista The Rev, com participação de Mike Portnoy.</p>
+      </div>
+
+      <div class="album">
+        <h3>Hail to the King (2013)</h3>
+        <p>Álbum com sonoridade inspirada no heavy metal clássico dos anos 80.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var tamanhoFonte = 16;
+    function mudarFonte(delta) {
+      tamanhoFonte += delta;
+      if (tamanhoFonte < 12) tamanhoFonte = 12;
+      if (tamanhoFonte > 26) tamanhoFonte = 26;
+      document.body.style.fontSize = tamanhoFonte + 'px';
+    }
+
+    function alternarContraste() {
+      document.body.classList.toggle('alto-contraste');
+    }
+  </script>
+
+</body>
+</html>
